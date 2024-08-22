@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-white text-lg font-bold flex items-center space-x-2">
+        <i class="fas fa-shopping-cart"></i>
+        <span>ShopEasy</span>
+      </div>
+      <div class="flex space-x-4 items-center">
+        <input type="text" placeholder="Search products..." class="p-2 rounded border border-gray-300 outline-none">
+        <ul class="flex space-x-4">
+          <li><a href="#" class="text-white" id="home-link">Home</a></li>
+          <li><a href="#" class="text-white">Products</a></li>
+          <li><a href="#" class="text-white">About</a></li>
+          <li><a href="contact.html" class="text-white">Contact</a></li>
+          <li><a href="#" id="cart-link" class="text-white"><i class="fas fa-shopping-cart"></i> Cart (0)</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="product-section">
+    <div class="container mx-auto mt-8">
+      <div id="carousel" class="relative w-full overflow-hidden">
+        <div class="carousel-inner flex transition-transform duration-500">
+          <img src="img1.webp" class="w-full" alt="Sale Slide">
+          <img src="img2.webp" class="w-full" alt="New Arrivals Slide">
+          <img src="img3.jpg" class="w-full" alt="Best Sellers Slide">
+        </div>
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2"><</button>
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-4 py-2">></button>
+      </div>
+    </div>
+
+    <div class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5">
+      <!-- Product Cards -->
+      <!-- Card 1 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+1" alt="Product 1" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 1</h3>
+        <p class="text-gray-700 mb-2">Rs.1000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <!-- Repeat cards for other products... -->
+      <!-- Card 2 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <!-- Repeat for more products... -->
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" alt="Product 2" class="w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Product 2</h3>
+        <p class="text-gray-700 mb-2">Rs.2000</p>
+        <button class="w-full bg-blue-600 text-white p-2 rounded flex items-center justify-center space-x-2 add-to-cart">
+          <i class="fas fa-cart-plus"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart -->
+  <div id="cart-section" class="container mx-auto mt-8 hidden">
+    <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <ul id="cart-items" class="space-y-4 mb-6"></ul>
+      <div class="text-right">
+        <span id="total-amount" class="text-xl font-bold text-gray-800">Total: Rs.0.00</span>
+      </div>
+      <div class="flex justify-end space-x-4 mt-4">
+        <button onclick="clearCart()" class="bg-red-500 text-white px-4 py-2 rounded">Clear Cart</button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded">Checkout</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-8 mt-12">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5">
+      <!-- About Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">About ShopEasy</h3>
+        <p class="text-gray-200">ShopEasy is your one-stop destination for a seamless shopping experience. Discover the best products from local shops and get them delivered to your doorstep.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-200 hover:text-white">Home</a></li>
+          <li><a href="#" class="text-gray-200 hover:text-white">Products</a></li>
+          <li><a href="#" class="text-gray-200 hover:text-white">About Us</a></li>
+          <li><a href="#" class="text-gray-200 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+        <ul class="space-y-2">
+          <li><i class="fas fa-map-marker-alt"></i> 123 Street, Kolkata, India</li>
+          <li><i class="fas fa-phone-alt"></i> +91 999 456 789</li>
+          <li><i class="fas fa-envelope"></i> support@shopeasy.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="container mx-auto mt-8 px-5 flex justify-center space-x-6">
+      <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container mx-auto mt-8 px-5 text-center text-gray-300">
+      &copy; 2024 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const carousel = document.querySelector('.carousel-inner');
+    const slides = document.querySelectorAll('.carousel-inner img');
+    let currentIndex = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+
+    const cartItems = [];
+    const cartLink = document.getElementById('cart-link');
+    const cartSection = document.getElementById('cart-section');
+    const productSection = document.getElementById('product-section');
+    const homeLink = document.getElementById('home-link');
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', (event) => {
+        const productCard = event.target.closest('.shadow-lg');
+        const productName = productCard.querySelector('h3').textContent;
+        const productPrice = productCard.querySelector('p').textContent.replace('Rs.', '');
+
+        addToCart(productName, productPrice);
+      });
+    });
+
+    cartLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      productSection.classList.add('hidden');
+      cartSection.classList.remove('hidden');
+    });
+
+    homeLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      cartSection.classList.add('hidden');
+      productSection.classList.remove('hidden');
+    });
+
+    function addToCart(name, price) {
+      const item = { name, price: parseFloat(price) };
+      cartItems.push(item);
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItemsList = document.getElementById('cart-items');
+      cartItemsList.innerHTML = '';
+
+      let totalAmount = 0;
+      cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - Rs.${item.price.toFixed(2)}`;
+        cartItemsList.appendChild(li);
+        totalAmount += item.price;
+      });
+
+      document.getElementById('total-amount').textContent = `Total: Rs.${totalAmount.toFixed(2)}`;
+      cartLink.innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${cartItems.length})`;
+    }
+
+    function clearCart() {
+      cartItems.length = 0;
+      updateCart();
+    }
+  </script>
+</body>
+</html>
